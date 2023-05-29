@@ -1,5 +1,5 @@
 ---
-- hosts: tag_Name_ACS_Jenkins
+- hosts: tag_Name_VIC_Jenkins
   become: true
   roles:
      - jenkins
