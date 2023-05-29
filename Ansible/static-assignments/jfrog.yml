@@ -1,5 +1,5 @@
 ---
-- hosts: tag_Name_ACS_artifactory
+- hosts: tag_Name_VIC_artifactory
   become: true
   roles:
      - artifactory
