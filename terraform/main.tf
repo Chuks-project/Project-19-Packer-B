@@ -41,6 +41,13 @@ module "VPC" {
   preferred_number_of_private_subnets = var.preferred_number_of_private_subnets
   private_subnets                     = [for i in range(1, 8, 2) : cidrsubnet(var.vpc_cidr, 8, i)]
   public_subnets                      = [for i in range(2, 5, 2) : cidrsubnet(var.vpc_cidr, 8, i)]
+
+resource "aws_instance" "example_instance" {
+  # EC2 instance configuration options
+
+  iam_instance_profile = aws_iam_instance_profile.ip.id
+}
+
 }
 
 #Module for Application Load balancer, this will create Extenal Load balancer and internal load balancer
