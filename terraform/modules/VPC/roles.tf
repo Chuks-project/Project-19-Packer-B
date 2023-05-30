@@ -34,13 +34,13 @@
 #       },
 #     ]
 
-  })
+#   })
 
-  tags = {
-    Name        = "aws assume policy"
-    Environment = var.environment
-  }
-}
+#   tags = {
+#     Name        = "aws assume policy"
+#     Environment = var.environment
+#   }
+# }
 
 resource "aws_iam_role_policy_attachment" "test-attach" {
   role       = aws_iam_role.ec2_instance_role.name
