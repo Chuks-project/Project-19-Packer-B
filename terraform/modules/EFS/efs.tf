@@ -19,10 +19,10 @@ EOF
 }
 
 # create key alias
-resource "aws_kms_alias" "alias" {
-  name          = "alias/kms"
-  target_key_id = aws_kms_key.VIC-kms.key_id
-}
+# resource "aws_kms_alias" "alias" {
+#   name          = "alias/kms"
+#   target_key_id = aws_kms_key.VIC-kms.key_id
+# }
 
 # create Elastic file system
 resource "aws_efs_file_system" "VIC-efs" {
