@@ -13,9 +13,11 @@ source "amazon-ebs" "terraform-web-prj-19" {
   ami_name      = "terraform-web-prj-19-${local.timestamp}"
   instance_type = "t2.micro"
   region        = var.region
+  vpc_id        = "vpc-073c4cc161269b5d7"
+  subnet_id     = "subnet-0e50ace499d61ee44"
   source_ami_filter {
     filters = {
-      name                = "RHEL-8.2_HVM-20200803-x86_64-0-Hourly2-GP2"
+      name                ="RHEL-8.6.0_HVM-20220503-x86_64-2-Hourly2-GP2"
       root-device-type    = "ebs"
       virtualization-type = "hvm"
     }
