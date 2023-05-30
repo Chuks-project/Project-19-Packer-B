@@ -34,7 +34,7 @@ variable "preferred_number_of_private_subnets" {
 
 variable "name" {
   type    = string
-  default = "ACS"
+  default = "VIC"
 
 }
 
