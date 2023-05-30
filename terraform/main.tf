@@ -44,11 +44,6 @@ module "VPC" {
 
 }
 
-resource "aws_instance" "example_instance" {
-  # EC2 instance configuration options
-
-  iam_instance_profile = aws_iam_instance_profile.ip.id
-}
 
 
 #Module for Application Load balancer, this will create Extenal Load balancer and internal load balancer
