@@ -1,6 +1,6 @@
 # create DB subnet group from the private subnets
 resource "aws_db_subnet_group" "VIC-rds" {
-  name       = "acs-rds"
+  name       = "vic-rds"
   subnet_ids = var.private_subnets
 
   tags = merge(
@@ -18,7 +18,7 @@ resource "aws_db_instance" "VIC-rds" {
   engine                 = "mysql"
   engine_version         = "5.7"
   instance_class         = "db.t2.micro"
-  name                   = "daviddb"
+  name                   = "Vicdb"
   username               = var.db-username
   password               = var.db-password
   parameter_group_name   = "default.mysql5.7"
