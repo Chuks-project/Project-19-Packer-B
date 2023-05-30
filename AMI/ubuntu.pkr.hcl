@@ -13,6 +13,8 @@ source "amazon-ebs" "terraform-ubuntu-prj-19" {
   ami_name      = "terraform-ubuntu-prj-19-${local.timestamp}"
   instance_type = "t2.micro"
   region        = var.region
+   vpc_id        = "vpc-073c4cc161269b5d7"
+  subnet_id     = "subnet-0e50ace499d61ee44"
   source_ami_filter {
     filters = {
       name                = "ubuntu/images/*ubuntu-xenial-16.04-amd64-server-*"
