@@ -89,7 +89,7 @@ resource "aws_instance" "wordpress" {
 }
 
 # create instance for bastion
-resource "aws_instance" "artifactory" {
+resource "aws_instance" "bastion" {
   ami                         = var.ami-bastion
   instance_type               = "t2.medium"
   subnet_id                   = var.subnets-compute
