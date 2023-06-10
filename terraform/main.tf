@@ -113,7 +113,7 @@ module "AutoScaling" {
   wordpress-alb-tgt = module.ALB.wordpress-tgt
   nginx-alb-tgt     = module.ALB.nginx-tgt
   tooling-alb-tgt   = module.ALB.tooling-tgt
-  instance_profile  = module.VPC.instance_profile
+  # instance_profile  = module.VPC.instance_profile
   public_subnets    = [module.VPC.public_subnets-1, module.VPC.public_subnets-2]
   private_subnets   = [module.VPC.private_subnets-1, module.VPC.private_subnets-2]
   keypair           = var.keypair
